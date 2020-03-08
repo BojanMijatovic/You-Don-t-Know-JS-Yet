@@ -67,5 +67,14 @@ const work = (xHome) => {
 }
 
 const testing = work();
-console.log(testing('work'));
+// console.log(testing('work'));
 
+
+
+const sum2Nums = () => {
+  const sumNum = (y, x) => x + y;
+  return sumNum;
+}
+
+const sum = sum2Nums();
+// console.log(sum(2, 3)); // sumNum
