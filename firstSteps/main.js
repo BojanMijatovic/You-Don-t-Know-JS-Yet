@@ -15,9 +15,9 @@ const a = 44 + 3 * 2;
 
 // --------- Strings ----------- //
 
-let name = 'Bojan';
+// let name = 'Bojan';
 let lastName = 'Mijatovic';
-let fullName = `${name} ${lastName}`;
+// let fullName = `${name} ${lastName}`;
 // console.log(fullName);
 
 let sentence = 'Here is my first sentence \n and here is second sentence :) ';
@@ -65,9 +65,52 @@ expressions like the following one, as few parentheses as possible are necessary
 
 // --------Automatic type conversion ------- // 
 
-console.log(typeof (5 - '1'));          //   number 4
-console.log(typeof ('5' + 1));          //   string 51
-console.log(typeof (1 + '5'));          //   string 15
-console.log(false == 0);                //    true
-console.log(null == undefined);    //    true
-console.log(undefined == 0);        //    false
+/*
+However, when
+ null or undefined
+occurs on either side of the operator, it produces true only if both sides are one
+of null or undefined.
+console.log(null == undefined
+  */
+
+// console.log(null == undefined);    //    true       *
+// console.log(typeof (5 - '1'));          //   number 4
+// console.log(typeof ('5' + 1));           //   string 51
+// console.log(typeof (1 + '5'));          //   string 15
+// console.log(false == 0);                //    true
+// console.log(undefined == 0);        //    false
+// console.log(0 == null);                  //    false
+// console.log(false == undefined);  //    false
+
+
+//  ----- Variables --------  //
+
+let mood = 'light';
+console.log(mood);
+mood = 'dark';
+console.log(mood);
+
+//  Conditional execution //
+
+let product = 'pants';
+let productPrice = 100;
+if (productPrice < 100) {
+  console.log(`${product} are cheap`);
+} else {
+  console.log(`${product} are expense`);
+}
+
+let age = 4;
+if (age < 18) {
+  console.log(`To young`);
+} else if (age > 18 && age < 30) {
+  console.log(`Best ages`);
+} else {
+  console.log(`You are grow person now :)`);
+}
+
+let name;
+do {
+  name = prompt('Enter your name here');
+} while (!name);
+console.log(`Your name is ${name}`);
