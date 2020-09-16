@@ -16,15 +16,15 @@
 // --------- Strings ----------- //
 
 // let name = 'Bojan';
-let lastName = 'Mijatovic';
+// let lastName = 'Mijatovic';
 // let fullName = `${name} ${lastName}`;
 // console.log(fullName);
 
-let sentence = 'Here is my first sentence \n and here is second sentence :) ';
+// let sentence = 'Here is my first sentence \n and here is second sentence :) ';
 //console.log(sentence);
 
-let backSlash = 'New sentence \"with backslash" ';
-let newName = 'Bojan \"Mijatovic"';
+// let backSlash = 'New sentence \"with backslash" ';
+// let newName = 'Bojan \"Mijatovic"';
 // console.log(backSlash);
 // console.log(newName);
 
@@ -221,3 +221,5 @@ i da se ispisuju samo brojevi koji su deljivi sa 2
 //     console.log(`i is ${i}`);
 //   }
 // }
+
+
