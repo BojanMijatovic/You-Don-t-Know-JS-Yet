@@ -39,21 +39,25 @@ if (login == 'Employee') {
 // false || alert("printed");
 //In the first line, the OR || operator stops the evaluation immediately upon seeing true, so the alert isn’t run.
 
-let login = prompt('Who is there');
+// let login = prompt('Who is there');
 
-if (login == 'admin') {
-  let password = prompt('enter password')
+// if (login == 'admin') {
+//   let password = prompt('enter password')
 
-  if (password == 'the master') {
-    console.log(`Welcome admin`);
-  } else if (password == '') {
-    console.log(`cancel`);
-  } else {
-    console.log(`Wrong password`);
-  }
+//   if (password == 'the master') {
+//     console.log(`Welcome admin`);
+//   } else if (password == '') {
+//     console.log(`cancel`);
+//   } else {
+//     console.log(`Wrong password`);
+//   }
 
-} else if (login == '') {
-  console.log('cancel');
-} else {
-  console.log(`I do not know you`);
-}
+// } else if (login == '') {
+//   console.log('cancel');
+// } else {
+//   console.log(`I do not know you`);
+// }
+
+let user = 'John';
+
+console.log(user ?? 'not found');
