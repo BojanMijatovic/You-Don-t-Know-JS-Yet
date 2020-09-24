@@ -1,80 +1,29 @@
-// function checkAge(age) {
-  // if (age > 18) {
-  //   return true;
-  // } else {
-  //   return confirm('Did parents allow you?');
-  // }
-  // if (age > 18) {
-  //   return console.log(age);
-  // } return console.log('Did parents allow you ');
-  // return (age > 18) ? console.log('You are welcome') : console.log('To young');
-// }
-// checkAge(2);
-// checkAge(34);
+// Write a JavaScript function to check whether a string is blank or not
+function is_Blank(str) {
+  if (str.length === 0) {
+    return true;
+  } return false;
+}
 
-/*Write a function min(a,b) which returns the least of two numbers a and b.*/
-// function showMinNum(a, b) {
-//   return Math.min(a, b);
-// }
-// console.log(showMinNum(3, 11));
-// console.log(showMinNum(23, 11));
+// console.log(is_Blank(''));
+// console.log(is_Blank('abc'))
 
+// Write a JavaScript function to capitalize the first letter of a string
+function capitalize(str) {
+  return `${str[0].toUpperCase()}${str.slice(1, str.length)}`
+}
+// console.log(capitalize('js string exercises'));
 
-// let x = 1;
+// Write a JavaScript function to split a string and convert it into an array of words
+function string_to_array(str) {
+  return str.trim().split(' ')
+}
+// console.log(string_to_array("Robin Singh"));
 
-// function a() {
-//   let y = 2;
-//   output(y);
-// }
+// Write a JavaScript function to parameterize a string "robin-singh-from-usa"
+function string_parameterize(str) {
+  str = str.toLowerCase();
+  return str.replace(' ', '-');
+}
 
-// function b() {
-//   let z = 3;
-//   output(z);
-// }
-
-// function output(value) {
-//   const para = document.createElement('p');
-//   document.body.appendChild(para);
-//   para.textContent = 'Value: ' + value;
-// }
-
-// output(x);
-// a();
-// b();
-
-
-// function greatFunc() {
-//   let num = 1;
-
-//   smallFunc1(num);
-//   smallFunc2(num);
-//   smallFunc3(num);
-// }
-
-// function smallFunc1(a) {
-//   console.log(a);
-// }
-
-// function smallFunc2(a) {
-//   console.log(a);
-// }
-// function smallFunc3(a) {
-//   console.log(a);
-// }
-
-// greatFunc();
-
-// let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
-// let para = document.createElement('p');
-// // Add your code here
-// function chooseName(names) {
-//   let name = Math.floor(Math.random() * names.length);
-//   return names[name];
-// }
-
-// console.log(chooseName(names));
-
-// console.log(chooseName(names));
-
-// console.log(chooseName(names));
-
+console.log(string_parameterize("Robin Singh"));
