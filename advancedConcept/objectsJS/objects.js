@@ -31,12 +31,12 @@
     Remove the property name from the object.
 */
 
-const user = {};
-user.name = 'John';
-user.surName = 'Smith';
-user.name = 'Alex';
-delete user.name;
-console.log(user);
+// const user = {};
+// user.name = 'John';
+// user.surName = 'Smith';
+// user.name = 'Alex';
+// delete user.name;
+// console.log(user);
 
 
 /*Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
@@ -67,3 +67,37 @@ Write the code to sum all salaries and store in the variable sum. Should be 390 
 
 // console.log(isEmpty(schedule));
 
+const bankUser = {
+  name: '',
+  lastName: '',
+  id: 0,
+  deposit: 0
+}
+
+const createNewBankUser = (name, lastName, id, deposit) => {
+  bankUser.name = name;
+  bankUser.lastName = lastName,
+    bankUser.id = Math.floor(Math.random() * id) + 100,
+    bankUser.deposit = deposit
+}
+
+createNewBankUser('Alex', 'Tesla', 4, 200);
+const addDeposit = addAmount => bankUser.deposit += addAmount;
+
+
+
+const removeDeposit = (amount) => {
+  if (bankUser.deposit == 0 || bankUser.deposit < amount) {
+    return console.log(`You are low with deposit`);
+  } else {
+    bankUser.deposit -= amount;
+    return console.log(`Now you have on account ${bankUser.deposit}$`);
+  }
+}
+addDeposit(200);
+removeDeposit(20);
+addDeposit(500);
+
+removeDeposit(500);
+
+console.log(bankUser);
