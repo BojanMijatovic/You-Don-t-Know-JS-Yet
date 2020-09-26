@@ -67,37 +67,58 @@ Write the code to sum all salaries and store in the variable sum. Should be 390 
 
 // console.log(isEmpty(schedule));
 
-const bankUser = {
-  name: '',
-  lastName: '',
-  id: 0,
-  deposit: 0
+// const bankUser = {
+//   name: '',
+//   lastName: '',
+//   id: 0,
+//   deposit: 0
+// }
+
+// const createNewBankUser = (name, lastName, id, deposit) => {
+//   bankUser.name = name;
+//   bankUser.lastName = lastName,
+//     bankUser.id = Math.floor(Math.random() * id) + 100,
+//     bankUser.deposit = deposit
+// }
+
+// createNewBankUser('Alex', 'Tesla', 4, 200);
+// const addDeposit = addAmount => bankUser.deposit += addAmount;
+
+
+
+// const removeDeposit = (amount) => {
+//   if (bankUser.deposit == 0 || bankUser.deposit < amount) {
+//     return console.log(`You are low with deposit`);
+//   } else {
+//     bankUser.deposit -= amount;
+//     return console.log(`Now you have on account ${bankUser.deposit}$`);
+//   }
+// }
+// addDeposit(200);
+// removeDeposit(20);
+// addDeposit(500);
+
+// removeDeposit(500);
+
+// console.log(bankUser);
+
+var student = {
+  name: "David Rays",
+  class: "VI",
+  rollo: 12
+};
+
+/*
+1. Write a JavaScript program to list the properties of a JavaScript object.
+Sample Output: name, class, rollo
+2. Write a JavaScript program to delete the rollo property from the following object. Also print the object before or after deleting the property.
+*/
+
+for (info in student) {
+  console.log(info);
 }
 
-const createNewBankUser = (name, lastName, id, deposit) => {
-  bankUser.name = name;
-  bankUser.lastName = lastName,
-    bankUser.id = Math.floor(Math.random() * id) + 100,
-    bankUser.deposit = deposit
-}
+const deleteRollo = () => delete student.rollo;
+deleteRollo();
+console.log(student);
 
-createNewBankUser('Alex', 'Tesla', 4, 200);
-const addDeposit = addAmount => bankUser.deposit += addAmount;
-
-
-
-const removeDeposit = (amount) => {
-  if (bankUser.deposit == 0 || bankUser.deposit < amount) {
-    return console.log(`You are low with deposit`);
-  } else {
-    bankUser.deposit -= amount;
-    return console.log(`Now you have on account ${bankUser.deposit}$`);
-  }
-}
-addDeposit(200);
-removeDeposit(20);
-addDeposit(500);
-
-removeDeposit(500);
-
-console.log(bankUser);
