@@ -4,7 +4,6 @@ function is_Blank(str) {
     return true;
   } return false;
 }
-
 // console.log(is_Blank(''));
 // console.log(is_Blank('abc'))
 
@@ -25,5 +24,37 @@ function string_parameterize(str) {
   str = str.toLowerCase();
   return str.replace(' ', '-');
 }
+// console.log(string_parameterize("Robin Singh"));
 
-console.log(string_parameterize("Robin Singh"));
+//reverse string
+function rev(para) {
+  return para.split('').reverse().join('');
+}
+// console.log(rev('daaa'));
+
+// palindrome 
+function palindrome(str) {
+  if (str === str.split('').reverse().join('')) {
+    return `${str} is palindrome`
+  } return `${str} in not palindrome`
+}
+// console.log(palindrome('dad'));
+// console.log(palindrome('test'));
+
+
+
+
+/*
+Function starting with…
+
+    "get…" – return a value,
+    "calc…" – calculate something,
+    "create…" – create something,
+    "check…" – check something and return a boolean, etc.
+
+    showMessage(..)     // shows a message
+    getAge(..)          // returns the age (gets it somehow)
+    calcSum(..)         // calculates a sum and returns the result
+    createForm(..)      // creates a form (and usually returns it)
+    checkPermission(..) // checks a permission, returns true/false
+*/
