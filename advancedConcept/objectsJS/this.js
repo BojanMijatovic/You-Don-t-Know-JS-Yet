@@ -37,3 +37,32 @@
 // notes.removeNote();
 // notes.addNote('Here is new note')
 // console.log(notes.showNote());
+
+
+
+// ------Constructor Functions
+
+
+// function Car(name, type) {
+//   this.name = name;
+//   this.type = type;
+//   this.showCar = function () {
+//     return `${this.name} ${this.type}`
+//   }
+// }
+
+// let volvo = new Car('volvo', 'mt-400');
+// console.log(volvo);
+// console.log(volvo.showCar());
+
+
+// function User(name, lastName) {
+//   this.name = name;
+//   this.lastName = lastName;
+//   this.showUser = function () {
+//     return `${this.name} ${this.lastName}`
+//   }
+// }
+
+// const user = new User('Alex', 'Smith');
+// console.log(user.showUser());
