@@ -77,3 +77,14 @@
 
 // const sum = new Calculator();
 // console.log(sum.sumNums());
+
+// function NewUser(name) {
+//   this.name = name;
+// }
+
+// const john = new NewUser('john');
+// const alex = new NewUser('alex');
+
+// const users = [];
+// users.push(john, alex);
+// console.log(users);
