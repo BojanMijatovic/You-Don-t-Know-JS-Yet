@@ -102,11 +102,11 @@ Write the code to sum all salaries and store in the variable sum. Should be 390 
 
 // console.log(bankUser);
 
-var student = {
-  name: "David Rays",
-  class: "VI",
-  rollo: 12
-};
+// const  student = {
+//   name: "David Rays",
+//   class: "VI",
+//   rollo: 12
+// };
 
 /*
 1. Write a JavaScript program to list the properties of a JavaScript object.
@@ -114,11 +114,21 @@ Sample Output: name, class, rollo
 2. Write a JavaScript program to delete the rollo property from the following object. Also print the object before or after deleting the property.
 */
 
-for (info in student) {
-  console.log(info);
-}
+// for (info in student) {
+//   console.log(info);
+// }
 
-const deleteRollo = () => delete student.rollo;
-deleteRollo();
-console.log(student);
+// const deleteRollo = () => delete student.rollo;
+// deleteRollo();
+// console.log(student);
 
+let a = {};
+let b = {};
+console.log(a === b);
+
+a = b;
+a.name = 'test';
+
+console.log(a.name);
+console.log(b.name);
+console.log(a === b);
