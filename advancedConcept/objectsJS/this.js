@@ -66,3 +66,14 @@
 
 // const user = new User('Alex', 'Smith');
 // console.log(user.showUser());
+
+// function Calculator() {
+//   this.num1 = parseInt(prompt('num1'));
+//   this.num2 = parseInt(prompt('num2'));
+//   this.sumNums = function () {
+//     return `${this.num1 + this.num2}`
+//   }
+// }
+
+// const sum = new Calculator();
+// console.log(sum.sumNums());
