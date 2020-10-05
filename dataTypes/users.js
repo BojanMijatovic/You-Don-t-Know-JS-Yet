@@ -1,5 +1,6 @@
 const users = [];
 
+//  create user
 const createUsers = (userName, userLastName) => {
   let user = { userName, userLastName }
   return users.push(user);
@@ -8,21 +9,20 @@ const createUsers = (userName, userLastName) => {
 createUsers('Alex', 'Scoot');
 createUsers('Brad', 'Travis');
 createUsers('Ted', 'Luck');
-console.log(users);
-
-const showUsers = (users) => {
-  return users.map((user, id) => `ID-${id} ${user.userName} last name ${user.userLastName}`)
-}
-
-console.log(showUsers(users));
-
-const findUserByName = (users, name) => {
-  return users.filter(user => user.userName.toLowerCase() == name.toLowerCase())
-}
-
-console.log(findUserByName(users, 'BRaD'));
 
 
+//  show list off users
+const showUsers = users => users.map((user, id) => `ID-${id} ${user.userName} last name ${user.userLastName}`);
+
+// console.log(showUsers(users));
+
+// find by name
+const findUserByName = (users, name) => users.filter(user => user.userName.toLowerCase().includes(name));
+
+console.log(findUserByName(users, 'e'));
+
+
+//  remove user
 const removeUser = (users, name) => {
   let indexUser = users.findIndex(user => user.userName.toLowerCase() == name.toLowerCase());
   if (indexUser > -1) {
@@ -31,4 +31,13 @@ const removeUser = (users, name) => {
 }
 
 removeUser(users, 'brad');
+createUsers('Donald', 'Duck');
+createUsers('Fred', 'Lucas');
+
+// let num = 1;
+//  for of loop
+// for (const user of users) {
+//   console.log(`${num++} ${user.userName}`);
+// }
+
 console.log(users);
