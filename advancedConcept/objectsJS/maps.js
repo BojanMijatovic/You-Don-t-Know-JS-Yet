@@ -8,30 +8,36 @@
     map.size – returns the current element count.
 */
 
-const groceries = new Map([
-  ['tomato', 44],
-  ['apples', 47],
-  ['onions', 22]
-]);
+const users = new Map();
+users.set('alex', 110);
+users.set('john', 20);
+users.set('ted', 50);
 
-console.log(groceries.get('tomato'));
-console.log(groceries.set('guns', 100));
-console.log(groceries.delete('onions'));
-console.log(groceries);
-for (item of groceries.keys()) {
-  // console.log(item);
+
+//  show one 
+const showValueUser = user => users.get(user);
+console.log(showValueUser('ted'));
+
+// show all
+const showAll = user => {
+  for (user of users.keys()) {
+    console.log(user);
+  }
 }
+showAll(users);
 
-for (amount of groceries.values()) {
-  // console.log(amount);
-}
+//  remove all 
+const removeAll = () => users.clear();
+removeAll();
+console.log(users);
 
-
-const user = {
-  name: 'John',
-  age: 34
-}
-
-let john = new Map(Object.entries(user));
-
-console.log(john.get('name'));
+/*
+Set – is a collection of unique values.
+Methods and properties:
+    new Set([iterable]) – creates the set, with optional iterable (e.g. array) of values for initialization.
+    set.add(value) – adds a value (does nothing if value exists), returns the set itself.
+    set.delete(value) – removes the value, returns true if value existed at the moment of the call, otherwise false.
+    set.has(value) – returns true if the value exists in the set, otherwise false.
+    set.clear() – removes everything from the set.
+    set.size – is the elements count.
+*/ 
