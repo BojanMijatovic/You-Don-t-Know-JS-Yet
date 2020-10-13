@@ -1,0 +1,17 @@
+{
+  "name": "learning-functional",
+  "version": "1.0.0",
+  "description": "Functional lib and examples in ES8",
+  "main": "functionalPrograming.js",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.10.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bojan Mijatovic",
+  "license": "ISC"
+}
