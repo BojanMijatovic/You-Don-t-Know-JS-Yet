@@ -1,64 +1,38 @@
 
-import arr from './functionalPrograming.js';
 
-// arr.forEach(item => console.log(`${item}`));
+// Rock Paper Scissors JavaScript Game
+let computer = '';
 
-const type = (arg) => console.log(typeof (arg));
+const game = Math.floor(Math.random() * 9) + 1;
 
-// type(arr);
+const player = prompt('Chose rock or paper or scissors');
 
-let a = 1;
 
-const showIsFunc = (arg) => {
-  if (typeof (arg) === 'function') {
-    return arg;
-  }
-  return console.log(`${arg} is ${typeof (arg)}`);
+if (game > 0 && game < 4) {
+  computer = 'rock'
+} else if (game > 3 && game < 7) {
+  computer = 'paper'
+} else if (game > 6 && game < 10) {
+  computer = 'scissors'
 }
 
-// showIsFunc(type);
+const calcGame = (comp, human) => {
+  if (comp == human) {
+    return console.log(`Draw`);
+  } else if (comp == 'rock' && human == 'paper') {
+    return console.log(`Human wins`);
+  } else if (comp == 'scissors' && human == 'paper') {
+    return console.log(`Comp wins`);
+  } else if (comp == 'paper' && human == 'scissors') {
+    return console.log(`Human wins`);
+  } else if (comp == 'paper' && human == 'rock') {
+    return console.log(`Comp wins`);
+  }
+}
 
 
-const someReturn = () => `This is awesome`
-let n = someReturn();
-console.log(n);
+console.log(computer);
+console.log(game);
+console.log(player);
 
-// const user = {
-//   name: 'alex',
-//   lastName: 'red'
-// }
-
-// for (const item in user) {
-//   // if (user.hasOwnProperty(item)) {
-//   //   const element = user[item];
-//   //   console.log(element);
-//   // }
-//   // console.log(item);
-//   console.log(`Key ${item}`);
-//   console.log(`Value ${user[item]}`);
-// }
-
-
-// arr.forEach(num => {
-//   if (num % 2 == 0) {
-//     console.log(`num ${num} is even`);
-//   }
-// })
-
-// arr.forEach(num => num % 2 == 0 ? console.log(`num ${num} is even`) : console.log(`Num ${num} is odd`));
-
-
-
-// The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
-const isNum = arr.every(num => typeof (num) === 'number');
-// console.log(isNum);
-
-// for (let num of arr) {
-//   console.log(`Num = ${num * 2}`);
-// }
-
-
-
-// The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value. 
-// const isEven = arr.some(num => num > 2);
-// console.log(isEven);
+calcGame(computer, player);
