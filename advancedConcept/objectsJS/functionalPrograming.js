@@ -1,47 +1,41 @@
 
-class User {
-  constructor(name) {
-    this.name = name;
-  }
-  welcome() {
-    return `Welcome ${this.name}`;
-  }
-}
+const hotel = {
+  name: 'Hilton',
+  address: 'Novi Sad',
+  freeRooms: 100,
+  priceRent: 45,
 
-const alex = new User('alex');
+  //  rent rooms
+  rentRoom(room, daysToStay, clientCash) {
+    if (this.freeRooms < room) {
+      return console.log(`Sorry we are full`);
+    }
 
-console.log(alex.welcome());
+    // price single room
+    let price = () => {
+      let cash = daysToStay * this.priceRent;
+      if (clientCash < cash) {
+        return console.log(`Sorry you need more $, price is ${cash}`);
+      }
+      return console.log(`The price is ${cash}$ for ${daysToStay} days to stay per room`);
+    }
+    this.freeRooms -= room;
+    return price();
+  },
 
+  //  free rooms
+  showFreeRooms() {
+    return `How we have ${this.freeRooms} for rent`
+  },
 
-class Car {
-  constructor(model, year, color, gears) {
-    this.model = model;
-    this.year = year;
-    this.color = color;
-    this.gears = gears;
-  }
-
-  showCar() {
-    return `You have ${this.model}`
-  }
-}
-
-const bmw = new Car('bmw');
-console.log(bmw.showCar());
-
-
-class Js {
-
-  constructor(name) {
-    this.name = name;
-  }
-
-  showName() {
-    return `${this.name}`
+  showHotel() {
+    return console.log(`Hotel ${this.name} is in ${this.address} with capacity off 100 rooms`);
   }
 }
 
 
-const a = new Js('javas');
-console.log(a.showName());
-console.log(Js);
+
+console.log(hotel);
+
+hotel.rentRoom(2, 4, 500);
+console.log(hotel);
