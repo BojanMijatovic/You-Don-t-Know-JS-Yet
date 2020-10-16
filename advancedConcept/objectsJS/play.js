@@ -52,7 +52,7 @@ const game = (findNum, playerNum) => {
   }
 }
 
-console.log(`Computer num is ${findNum}`);
-console.log(`Player num is ${playerNum}`);
+// console.log(`Computer num is ${findNum}`);
+// console.log(`Player num is ${playerNum}`);
 
-game(findNum, playerNum);
+// game(findNum, playerNum);
