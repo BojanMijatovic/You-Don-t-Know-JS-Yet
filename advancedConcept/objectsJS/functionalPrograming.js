@@ -1,5 +1,4 @@
 
-
 const hotel = {
   name: 'Hilton',
   address: 'Novi Sad',
