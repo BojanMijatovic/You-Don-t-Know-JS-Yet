@@ -4,7 +4,7 @@
 3. Lexical Scope.
 4. Data type.               -
 5. Math Library.
-6. Number Library.
+6. Number Library.     -
 7. Strings.
 8. Prototype inheritance.
 9. Boolean.                   -

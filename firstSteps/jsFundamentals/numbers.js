@@ -1,7 +1,6 @@
 
 
-let intNum = 55;
-// console.log(typeof (intNum));
+
 
 /*Because storing floating-point values uses twice as much memory as storing integer values,
 ECMAScript always looks for ways to convert values into integers. */
@@ -39,13 +38,17 @@ let numFromString = Number('123');
 let str = '-2';
 // console.log(parseInt(str));         // returns -2
 let str1 = '123ccc';
-// console.log(parseInt(str1));           // returns 123
+// console.log(parseInt(str1));       // returns 123    
 
-let num1 = 2;
-let num2 = 20;
-let num3 = num1-- + num2;
-console.log(num1);
-let num4 = num1 + num2;
-console.log(num3); // 22
-console.log(num4); // 21
+// let num1 = 2;
+// let num2 = 20;
+// let num3 = num1-- + num2;
+// console.log(num1);
+// let num4 = num1 + num2;
+// console.log(num3); // 22
+// console.log(num4); // 21
 
+let intNum = 55;
+// console.log(typeof (intNum));
+
+let newNum = intNum.toFixed(2);  // returns string
