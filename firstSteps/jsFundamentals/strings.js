@@ -56,11 +56,13 @@ if (message.includes('bar')) {
 }
 
 // repeat() Method
-let b = 'na-';                                                                    // returns na-na-na-na-
+let b = 'na-';
+// b.repeat(4)                                                                      // returns na-na-na-na-
 
 // search method
 let text = 'cat, bat, sat, fat';
-let searchText = text.search('bat');        // returns the index of the first pattern occurrence in                                     the string or –1 if it’s not found. 
+let searchText = text.search('bat');        /* returns the index of the first pattern occurrence in  
+the string or –1 if it’s not found.  */
 
 //  replace method
 let replaceText = text.replace('bat', 'react');                 // returns cat, react, sat, fat
@@ -68,4 +70,4 @@ let replaceText = text.replace('bat', 'react');                 // returns cat, 
 // method  split(),
 let colors = 'red,blue,green,yellow';
 let colorsArr = colors.split(',');                                  // returns arr off color
-colorsArr.map((color, id) => console.log(`${id + 1} We have now ${color} color`))
+// colorsArr.map((color, id) => console.log(`${id + 1} We have now ${color} color`))

@@ -3,9 +3,9 @@
 2. Global Scope.          -
 3. Lexical Scope.
 4. Data type.               -
-5. Math Library.
+5. Math Library.           -
 6. Number Library.     -
-7. Strings.
+7. Strings.                     -
 8. Prototype inheritance.
 9. Boolean.                   -
 10. Symbols
