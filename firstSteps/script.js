@@ -13,11 +13,11 @@
 12. Operators.               -
 13. Statements.              -
 14. Reference Data type. (Class, Object, array, etc).
-15. How to add methods to object.
-16. Maps and Sets.
+15. How to add methods to object.                                 -
+16. Maps and Sets.                                                          -
 17. Functions declaration & expression.
 18. Default parameter.
-19. Spread operators.
+19. Spread operators.                                                     -
 20. Call back Function (Imp).
 21. OOP's in JS.
 22. Arrow Functions.

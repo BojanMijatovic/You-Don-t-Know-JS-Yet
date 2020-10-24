@@ -55,8 +55,93 @@ const b = a.splice(0, 2, 'add One', 'and Two');
 /*Key/value pairs can be added after initialization with set(), queried with get() and has(), counted
 with the size property, and removed with delete()and clear():*/
 
-const person = new Map;
+// const person = new Map();
 
-const addName = person.set('firstName', 'Jonas');
+// const addName = person.set('firstName', 'Jonas');
+// const addLastName = person.set('lastName', 'Tomas');
+// console.log(person);
+
+// let clearLastName = person.delete('lastName');
+
+// console.log(person);
+
+const year = () => 'year';
+
+// const addYear = person.set(year, 2020);
+
+// console.log(person);
+
+// const removeAll = () => person.clear();
+// removeAll();
+// console.log(person);
+
+// console.log(b);
+const addNums = [...b, 100, 101, 102, 103];
+
+// console.log(addNums);
+
+//  -------- OBJECTS
+
+const person = {
+  name: 'John',
+  lastName: 'Doe',
+  sayHello() {
+    return `Hello ${this.name} ${this.lastName}`
+  }
+}
 
 console.log(person);
+
+Object.defineProperty(person, 'name', {
+  writable: false,
+  value: 'Test'
+});
+
+// console.log(person);
+
+person.name = 'React';                            // not work because writable: false,
+
+
+Object.defineProperty(person, 'name', {
+  configurable: false,
+  value: 'Here is new Value'
+})
+
+delete person.name;                                   // not work because configurable: false
+
+person.name = 'This is  now new Value';     //  not work    because configurable: false
+
+
+
+
+const book = {
+  title: 'LOTR',
+  year: 2015
+}
+
+Object.defineProperty(book, 'year', {
+  get() {
+    return this.year;
+  },
+  set(newEdition) {
+    if (newEdition > this.year) {
+      this.edition = newEdition;
+    }
+  }
+})
+
+console.log(book);
+
+
+/*
+ book.year = 2020;
+cannot be written to and attempts to do so will be ignored. In strict mode, trying to write to a property
+with only a getter throws an error.
+*/
+
+book.newEdition = 2018;
+
+console.log(book);
+
+
+
