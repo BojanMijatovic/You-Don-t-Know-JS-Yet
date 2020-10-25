@@ -13,9 +13,9 @@ const twitter = {
     if (checkUser > -1) {
       return console.log(`We have that user, enter new name`);
     }
-    else if (userName.length <= 0) {           // validation off user
+    else if (userName.length < 1) {           // validation off user
       return console.log(`Please insert user name or we have that user`);
-    } else if (password.length < 3) {    // validation off password
+    } else if (password.length < 3) {       // validation off password
       return console.log(`Enter min 4 characters`);
     }
     return this.users.push({ userName, password })
@@ -54,28 +54,29 @@ const twitter = {
 
   //  add user post
   userAddPost() {
-    let userToFind = prompt('Enter user name');
+    const userToFind = prompt('Enter user name');
     const findUser = this.users.findIndex(user => user.userName == userToFind);
+
     if (findUser > -1) {
-      let post = prompt('Enter post here');
-      return this.users[findUser].addPost = post;
+      const postText = prompt('Enter post');
+      const userPosts = this.users[findUser].addPosts = [];
+
+
     }
   }
 }
 
 twitter.addUser();
-twitter.addUser();
 
-
-twitter.addUser();
 
 // twitter.findUser('a')
 // twitter.showUsers();
-
 // twitter.removeUser('ted')
-console.log(twitter);
-
 // twitter.changeUserName();
 
-// console.log(twitter);
 twitter.userAddPost();
+twitter.userAddPost();
+twitter.userAddPost();
+// twitter.userAddPost('a', '123');
+// twitter.userAddPost('a', 'aaaaaaaaa');
+console.log(twitter.users);
