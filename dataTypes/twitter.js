@@ -6,8 +6,15 @@ const twitter = {
   addUser() {
     let userName = prompt('Add user name');
     let password = prompt('enter password');
-    if (userName.length <= 0) {           // validation off user
-      return console.log(`Please insert user name`);
+
+    // check if user exist
+    const checkUser = this.users.findIndex(user => user.userName.toLowerCase() == userName.toLowerCase());
+
+    if (checkUser > -1) {
+      return console.log(`We have that user, enter new name`);
+    }
+    else if (userName.length <= 0) {           // validation off user
+      return console.log(`Please insert user name or we have that user`);
     } else if (password.length < 3) {    // validation off password
       return console.log(`Enter min 4 characters`);
     }
@@ -20,7 +27,7 @@ const twitter = {
   },
 
   //  find user
-  findUser(userToFind) {
+  findUsers(userToFind) {
     const usersList = this.users.filter(user => user.userName.toLowerCase().includes(userToFind.toLowerCase()));
     return usersList.map(user => console.log(`We have ${user.userName}`))
   },
@@ -28,17 +35,30 @@ const twitter = {
   // remove user
   removeUser(userToRemove) {
     const userIndex = this.users.findIndex(user => user.userName == userToRemove);
-    if (userIndex > -1) {
-      this.users.splice(userIndex, 1)
-    }
+    userIndex > -1 ? this.users.splice(userIndex, 1) : console.log(`We don't have that user to remove`);
   },
 
   // change user
-  changeUserName(userToFind, newName, newPassword) {
+  changeUserName() {
+    let userToFind = prompt('Enter user name to find');
     const userIndex = this.users.findIndex(user => user.userName == userToFind);
-    if (userIndex > -1) {
-      this.users[userIndex].userName = newName;
-      this.users[userIndex].password = newPassword;
+    if (userIndex == -1) {
+      return console.log(`We don't have that user`);
+    } else {
+      let newName = prompt('Enter new name');
+      let newPassword = prompt('Enter new password')
+      this.users[userIndex].userName = newName;             // change  user  name 
+      this.users[userIndex].password = newPassword;      // change  user  password 
+    }
+  },
+
+  //  add user post
+  userAddPost() {
+    let userToFind = prompt('Enter user name');
+    const findUser = this.users.findIndex(user => user.userName == userToFind);
+    if (findUser > -1) {
+      let post = prompt('Enter post here');
+      return this.users[findUser].addPost = post;
     }
   }
 }
@@ -55,6 +75,7 @@ twitter.addUser();
 // twitter.removeUser('ted')
 console.log(twitter);
 
-twitter.changeUserName('a', 'new', 'dsadsd');
+// twitter.changeUserName();
 
-console.log(twitter);
+// console.log(twitter);
+twitter.userAddPost();
