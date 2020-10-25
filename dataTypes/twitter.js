@@ -4,9 +4,9 @@ const twitter = {
 
   //add user
   addUser() {
-    let userName = prompt('Add user name');
-    let password = prompt('enter password');
-
+    const userName = prompt('Add user name');
+    const password = prompt('enter password');
+    const posts = [];
     // check if user exist
     const checkUser = this.users.findIndex(user => user.userName.toLowerCase() == userName.toLowerCase());
 
@@ -18,7 +18,7 @@ const twitter = {
     } else if (password.length < 3) {       // validation off password
       return console.log(`Enter min 4 characters`);
     }
-    return this.users.push({ userName, password })
+    return this.users.push({ userName, password, posts });
   },
 
   // show all users
@@ -54,29 +54,28 @@ const twitter = {
 
   //  add user post
   userAddPost() {
-    const userToFind = prompt('Enter user name');
-    const findUser = this.users.findIndex(user => user.userName == userToFind);
-
-    if (findUser > -1) {
-      const postText = prompt('Enter post');
-      const userPosts = this.users[findUser].addPosts = [];
-
-
+    const userName = prompt("Enter user name");
+    const userIndex = this.users.findIndex(user => user.userName == userName);
+    if (userIndex > -1) {
+      const post = prompt('Add post');
+      const usersPost = this.users[userIndex].posts;      // add post
+      usersPost.push({ post });
     }
   }
 }
 
-twitter.addUser();
+// twitter.addUser();
+// twitter.addUser();
+// twitter.addUser();
 
-
+// twitter.userAddPost();
+// twitter.userAddPost();
+// twitter.userAddPost();
 // twitter.findUser('a')
 // twitter.showUsers();
 // twitter.removeUser('ted')
 // twitter.changeUserName();
 
-twitter.userAddPost();
-twitter.userAddPost();
-twitter.userAddPost();
 // twitter.userAddPost('a', '123');
 // twitter.userAddPost('a', 'aaaaaaaaa');
 console.log(twitter.users);
