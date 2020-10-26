@@ -12,7 +12,7 @@
 11. Type conversion       -
 12. Operators.               -
 13. Statements.              -
-14. Reference Data type. (Class, Object, array, etc).
+14. Reference Data type. (Class, Object, array, etc).       -
 15. How to add methods to object.                                 -
 16. Maps and Sets.                                                          -
 17. Functions declaration & expression.

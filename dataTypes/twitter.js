@@ -61,16 +61,30 @@ const twitter = {
       const usersPost = this.users[userIndex].posts;      // add post
       usersPost.push({ post });
     }
-  }
+  },
+
+  //  show all posts
+  showUserPosts() {
+    const userName = prompt("Enter user name");
+    const userIndex = this.users.findIndex(user => user.userName == userName);
+    if (userIndex > -1) {
+      const usersPost = this.users[userIndex].posts;
+      usersPost.map((post, id) => console.log(`${id + 1} ${post.post}`))
+    }
+  },
+
+
 }
 
-// twitter.addUser();
+twitter.addUser();
 // twitter.addUser();
 // twitter.addUser();
 
-// twitter.userAddPost();
-// twitter.userAddPost();
-// twitter.userAddPost();
+twitter.userAddPost();
+twitter.userAddPost();
+twitter.userAddPost();
+
+// twitter.addLikeToPost();
 // twitter.findUser('a')
 // twitter.showUsers();
 // twitter.removeUser('ted')
@@ -79,3 +93,4 @@ const twitter = {
 // twitter.userAddPost('a', '123');
 // twitter.userAddPost('a', 'aaaaaaaaa');
 console.log(twitter.users);
+twitter.showUserPosts();
