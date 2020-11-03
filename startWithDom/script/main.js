@@ -1,7 +1,7 @@
 'use strict';
 
 //   create random num 
-const secretNum = Math.round(Math.random() * 20 + 1);
+let secretNum = Math.round(Math.random() * 20 + 1);
 console.log(secretNum);
 
 //  set score 
@@ -45,3 +45,18 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 });
+
+
+//  reset game 
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  document.querySelector('.score').textContent = score;
+  console.log(score);
+  secretNum = Math.round(Math.random() * 20 + 1);
+  document.querySelector('.number').textContent = '?';
+  console.log(secretNum);
+  document.querySelector('.message').textContent = 'Insert number';
+  document.querySelector('.guess').value = '';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+})
