@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  margin: 25% auto;
+  text-align: center;
+}
+
+.app h2 {
+  margin: 0 auto;
+}
+
+button {
+  margin: 0 auto;
+  border: none;
+  color: #b38cd4;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+button:active,
+button:hover {
+  cursor: pointer;
+}
