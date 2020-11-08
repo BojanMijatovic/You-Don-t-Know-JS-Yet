@@ -21,10 +21,12 @@ for (let btn of showModal) {
   btn.addEventListener('click', openModal)
 }
 
+
 closeBtnModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
 
+//  escape key
 document.addEventListener('keydown', function (e) {
   e.key === 'Escape' ? closeModal() : false;
 })
