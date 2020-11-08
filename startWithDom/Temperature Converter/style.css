@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  margin: 80px auto;
+  border: 1px solid black;
+  align-items: center;
+  width: 80%;
+}
+
+.app h2 {
+  margin-bottom: 30px;
+}
+
+
+.app button {
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.app .result {
+  margin-top: 20px;
+}
