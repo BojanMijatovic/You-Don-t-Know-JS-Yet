@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  align-items: center;
+  left: 25%;
+  position: absolute;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.show__text {
+  margin: 30px;
+  background-color: crimson;
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.buttons {
+  display: flex;
+}
+
+button {
+  padding: 5px;
+  margin: 10px;
+}
