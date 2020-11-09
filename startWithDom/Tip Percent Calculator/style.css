@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+}
+
+
+h2 {
+  margin: 20px;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+
+button {
+  width: 25%;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+}
