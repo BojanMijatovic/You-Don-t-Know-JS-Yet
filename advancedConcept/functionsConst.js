@@ -1,15 +1,32 @@
 
+function first() {
+  const a = 'Hello';
 
-const Person = function (name, lastName, job) {
-  this.name = name;
-  this.lastName = lastName;
-  this.job = job;
+  function second() {
+    const b = 'user';
+    return b;
+  }
+
+  return console.log(`${a} ${second()} ${third()}`);
 }
-/*The first part of this example shows the typical use of a constructor—to create a new object via the
-new operator.*/
-let alex = new Person('Alex', 'Rust', 'freelance');
 
-console.log(alex);
 
-let fred = new Person('Fred', 'Smith', 'full stack');
-console.log(fred);
+function third() {
+  const c = 'Alex';
+  return c;
+}
+
+first();
+
+
+//   this word
+const person = {
+  name: 'Alex',
+  showAge: () => console.log(this),
+  show() {
+    console.log(this);
+  }
+}
+
+// person.showAge();
+// person.show();
