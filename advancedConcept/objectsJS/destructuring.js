@@ -23,3 +23,15 @@ let [first, second] = restaurant.categories;
 
 const [order1, order2] = restaurant.orderFood(0, 0);
 console.log(order1, order2);
+
+const beerShop = {
+  type: ['lager', 'ipa', 'red', 'black'],
+  vine: ['black', 'white'],
+  orderDrink(beerOrder, vineOrder) {
+    return [this.type[beerOrder], this.vine[vineOrder]]
+  }
+}
+
+const [beer, vine] = beerShop.orderDrink(2, 1);
+
+console.log(`You order ${beer} beer and ${vine} vine`);
