@@ -30,3 +30,7 @@ const person = {
 
 // person.showAge();
 // person.show();
+
+const matilda = {
+  year: 2017
+}
