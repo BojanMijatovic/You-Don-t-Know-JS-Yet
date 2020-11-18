@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 const restaurant = {
   name: 'Adriana',
   location: 'Bul... , Novi Sad , Serbia',
@@ -65,9 +63,6 @@ const beerShop = {
 
 //  -------------------spread operator
 
-const arr = [1, 2, 334, 44, 5, 67, 532];
-
-const newAr = [213, 111, 1, ...arr,];
 // console.log(newAr);
 // console.log(arr);
 
@@ -95,19 +90,19 @@ const [pizza, ...otherFood] = restaurant.categories;
 // console.log(pizza);
 
 
-const person = {
-  name: 'Alex',
-  lastName: 'Red',
-  age: 32,
-  job: 'developer',
-  hobby: ['airsoft', 'mma', 'projects'],
-  technologies: {
-    start: 'react',
-    work: 'javascript'
-  }
-}
+// const person = {
+//   name: 'Alex',
+//   lastName: 'Red',
+//   age: 32,
+//   job: 'developer',
+//   hobby: ['airsoft', 'mma', 'projects'],
+//   technologies: {
+//     start: 'react',
+//     work: 'javascript'
+//   }
+// }
 
-const { technologies, ...others } = person;
+// const { technologies, ...others } = person;
 // console.log(technologies);
 
 const add = function (...numbers) {
@@ -118,6 +113,61 @@ const add = function (...numbers) {
   console.log(zero);
 }
 
-add(2, 1);
-add(2, 3, 4);
-add(2, 3, 4, 1, 1, 1);
+// add(2, 1);
+// add(2, 3, 4);
+// add(2, 3, 4, 1, 1, 1);
+
+
+
+const beerNum = beerShop.type.length || 0;
+// console.log(beerNum); 
+
+//  ---------------- destructing arr and obj
+
+const arr = ['react', 'redux', 'next.js'];
+
+// const [react, redux] = arr;
+// console.log(react);
+
+
+const person = {
+  name: 'Alex',
+  lastName: 'Swan'
+}
+
+const { name: firstName } = person;
+// console.log(firstName);
+
+
+//   ---------------- spread operator 
+
+const newArr = [1, 2, 3];
+const addArr = [...newArr, 4, 5, 6];
+// console.log(addArr);
+
+const addFramework = [...arr, 'html', 'css', 'vanillaJs'];
+// console.log(addFramework);
+
+//  ------------- rest operator 
+const [, , nextJs, ...other] = addFramework;
+console.log(nextJs);
+
+
+//  practice
+const sumNums = function (...numbers) {
+  let a = 0;
+  numbers.forEach(number => a += number);
+  return console.log(a);
+}
+
+
+// sumNums(2, 3)
+// sumNums(2, 3, 10)
+// sumNums(2, 3, 10, 20)
+
+const totalArr = [...addArr, ...addFramework, ...newArr];
+// console.log(totalArr);
+
+const [, , , , , , react, ...rest] = totalArr;
+
+console.log(react);
