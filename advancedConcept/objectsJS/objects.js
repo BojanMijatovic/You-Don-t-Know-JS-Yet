@@ -175,14 +175,24 @@ const technologies = [{ name: 'alex' },
 
 
 
-const order = [1, 2, 3, 4, 5, 6, 5, 5, 6, 6];
+// const order = [1, 2, 3, 4, 5, 6, 5, 5, 6, 6];
 
-const newArr = new Set(order);
-console.log(newArr);
+// const newArr = new Set(order);
+// console.log(newArr);
 
-const test = {
-  name: 'Red'
+// const test = {
+//   name: 'Red'
+// }
+
+// newArr.add(test);
+// console.log(newArr);
+
+
+
+const arr = new Set(technologies);
+
+// arr.forEach(name => console.log(`${name.name}`))
+
+for (const { name } of arr) {
+  console.log(`My name is ${name[0].toUpperCase().concat(name.slice(1))}`);
 }
-
-newArr.add(test);
-console.log(newArr);
