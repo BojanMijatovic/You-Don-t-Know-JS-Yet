@@ -169,5 +169,18 @@ const totalArr = [...addArr, ...addFramework, ...newArr];
 // console.log(totalArr);
 
 const [, , , , , , react, ...rest] = totalArr;
-
 console.log(react);
+
+const sumDouble = function (num, ...rest) {
+  rest.forEach(val => num *= val);
+  return num;
+}
+
+console.log(sumDouble(2, 3));
+console.log(sumDouble(2, 3, 2));
+
+const [lunchTime, ...restTime] = restaurant.starterMenu;
+const [, , burger] = restaurant.categories;
+const { name, location: downtown } = restaurant;
+
+console.log(`For ${lunchTime} you have ${burger} in ${name} ${downtown}`);

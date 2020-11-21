@@ -1,3 +1,4 @@
+'use strict';
 // const user = {
 //   name: 'Alex',
 //   age: 34
@@ -122,13 +123,66 @@ Sample Output: name, class, rollo
 // deleteRollo();
 // console.log(student);
 
-let a = {};
-let b = {};
-console.log(a === b);
+// let a = {};
+// let b = {};
+// console.log(a === b);
 
-a = b;
-a.name = 'test';
+// a = b;
+// a.name = 'test';
 
-console.log(a.name);
-console.log(b.name);
-console.log(a === b);
+// console.log(a.name);
+// console.log(b.name);
+// console.log(a === b);
+
+
+// const food = ['pizza', 'burger', 'pasta'];
+// const drinks = ['beer', 'soda', 'juice'];
+
+// const allMenu = [...food, ...drinks];
+// for (const item of allMenu) {
+//   console.log(item);
+// }
+
+
+// const hours = {
+//   mon: {
+//     open: 10,
+//     close: 22
+//   },
+//   thu: {
+//     open: 14,
+//     close: 22
+//   },
+//   open() {
+//     return `We open ${this.mon?.open}`;
+//   }
+// }
+
+
+// console.log(hours.open?.() ?? `No such thing`);
+
+
+// console.log(Object.keys(hours));
+
+const technologies = [{ name: 'alex' },
+{ name: 'ted' },
+{ name: 'freddy' }
+];
+
+// for (const { name } of technologies) {
+//   console.log(Object.values(name));
+// }
+
+
+
+const order = [1, 2, 3, 4, 5, 6, 5, 5, 6, 6];
+
+const newArr = new Set(order);
+console.log(newArr);
+
+const test = {
+  name: 'Red'
+}
+
+newArr.add(test);
+console.log(newArr);
