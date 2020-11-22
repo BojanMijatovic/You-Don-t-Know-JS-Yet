@@ -1,76 +1,34 @@
+'use strict';
 
-function first() {
-  const a = 'Hello';
-
-  function second() {
-    const b = 'user';
-    return b;
-  }
-
-  return console.log(`${a} ${second()} ${third()}`);
-}
+// const bookingArr = []
 
 
-function third() {
-  const c = 'Alex';
-  return c;
-}
+// const createBooking = function (flightNumber, numberPassengers = 1, price = 150 * numberPassengers) {
 
-first();
-
-
-//   this word
-// const person = {
-//   name: 'Alex',
-//   showAge: () => console.log(this),
-//   show() {
-//     console.log(this);
+//   const booking = {
+//     flightNumber,
+//     numberPassengers,
+//     price
 //   }
+//   bookingArr.push(booking);
+//   console.log(booking);
 // }
 
-// person.showAge();
-// person.show();
+// createBooking('LH123');
+// createBooking('LH123', 3);
 
-const matilda = {
-  year: 2017,
-  name: 'Test'
+
+const firstLetterUp = function (str) {
+  return str[0].toUpperCase().concat(str.slice(1));
 }
 
 
-const a = {
-  name: 'A',
-  show() {
-    console.log(this);
-  },
-  newObj: {
-    newName: 'B',
-    showB() {
-      console.log(this);
-    },
-    showArr: () => {
-      console.log(this);
-    }
-  }
+const userName = function (name) {
+  return name;
 }
 
-// a.show();                    // show A obj
-// a.newObj.showB();    // show newObj
-// a.newObj.showArr();  // show  window obj
+const name = userName('bob');
+const secondName = ('ted');
 
-
-const person = {
-  name: 'Alex',
-  year: 20,
-
-  showAge: function () {
-
-    console.log(this.year);
-    let addAge = () => {
-      console.log(this.year + 20);
-    }
-
-    return addAge();
-  }
-}
-
-person.showAge();
+console.log(firstLetterUp(name));
+console.log(firstLetterUp(secondName));
