@@ -17,18 +17,14 @@
 // createBooking('LH123');
 // createBooking('LH123', 3);
 
+const addNums = function (num1, num2) {
+  return `${num1 + num2}`;
+}
 
-const firstLetterUp = function (str) {
-  return str[0].toUpperCase().concat(str.slice(1));
+const multiplyNums = function (multi, fu) {
+  return fu(2, 2) * multi;
 }
 
 
-const userName = function (name) {
-  return name;
-}
 
-const name = userName('bob');
-const secondName = ('ted');
-
-console.log(firstLetterUp(name));
-console.log(firstLetterUp(secondName));
+console.log(multiplyNums(3, addNums));
