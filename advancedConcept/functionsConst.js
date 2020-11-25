@@ -1,9 +1,5 @@
 'use strict';
 
-// const greet = (greeting) => (name) => console.log(`${greeting} ${name}`);
-
-// greet('Hi')('Alex')
-
 const lufthansa = {
   airline: 'lufthansa',
   bookings: [],
@@ -39,7 +35,6 @@ const book = lufthansa.book;
 
 
 //  bind 
-
 // const eurowingsBook = book.bind(eurowings);
 // const serbianBook = book.bind(serbiaairlines);
 // console.log(eurowingsBook);
@@ -65,30 +60,89 @@ btn.addEventListener('click', lufthansa.buyPlanes.bind(lufthansa))          // c
 
 // const addTax = (rate, value) => rate + rate * value;
 // const addVat = addTax.bind(null, 0.23);
-
-
-
 const addVat = () => (rate, value) => rate + rate * value;
 // console.log(addVat(null)(0.1, 100));
 // console.log(addVat(null)(0.15, 200));
 
 
+
+//  -------------- practice bind
 const mainObj = {
   addFramework(addName, lastName, framework) {
     return `${this.name = addName} ${this.lastName = lastName} work on framework ${this.framework = framework}`
+  },
+  addExperience(years) {
+    return `${this.name} have ${this.years = years} years off experience in ${this.framework}`;
   }
 }
 
-console.log(mainObj.addFramework('Tom', 'Scot', 'react'));
-console.log(mainObj);
+// console.log(mainObj.addFramework('Tom', 'Scot', 'react'));
+// console.log(mainObj.addExperience(4));
+// console.log(mainObj);
 
-
+//  bind function
 const addFramework = mainObj.addFramework;
-
+const addExperience = mainObj.addExperience;
 
 const alex = {}
 
 const alexFramework = addFramework.bind(alex);
-console.log(alexFramework('Alex', 'Piston', 'angular'));
-console.log(alex);
+const alexExperience = addExperience.bind(alex);
+// console.log(alexFramework('Alex', 'Piston', 'angular'));
+// console.log(alexExperience(2));
+// console.log(alex);
 
+
+const ted = {};
+
+const addTedFramework = addFramework.bind(ted);
+const tedExperience = addExperience.bind(ted);
+// console.log(addTedFramework('Ted', 'Jonson', 'Vue'));
+// console.log(tedExperience('3+'));
+
+
+
+const newUser = {
+  addNewUser(name, lastName) {
+    return `${this.name = name}  ${this.lastName = lastName}`
+  }
+}
+
+const addNewUser = newUser.addNewUser;
+
+const tom = {}
+
+const addTom = addNewUser.bind(tom);
+// console.log(addTom('Tom', 'Sanders'));
+// console.log(tom);
+
+const fred = {}
+
+const addFred = addNewUser.bind(fred);
+// console.log(addFred('Fred', 'Luton'));
+
+
+//  call method
+
+const frameworks = {
+  frontend: [],
+  addFrontend(add) {
+    return this.frontend.push(add)
+  }
+}
+
+const newFramework = frameworks.addFrontend;
+
+const framework = {
+  frontend: [],
+  showAll() {
+    return ` You have on frontend frameworks ${this.frontend}`
+  }
+}
+
+const addAngular = newFramework.call(framework, 'angular');
+const addReact = newFramework.call(framework, 'react');
+const addVue = newFramework.call(framework, 'vue');
+
+console.log(framework);
+console.log(framework.showAll());
