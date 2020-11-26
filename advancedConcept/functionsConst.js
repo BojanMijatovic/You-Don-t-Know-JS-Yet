@@ -54,8 +54,8 @@ lufthansa.buyPlanes = function () {
 
 
 
-const btn = document.querySelector('button');                                            //  button
-btn.addEventListener('click', lufthansa.buyPlanes.bind(lufthansa))          // click is on btn so that is this
+// const btn = document.querySelector('button');                                            //  button
+// btn.addEventListener('click', lufthansa.buyPlanes.bind(lufthansa))          // click is on btn so that is this
 
 
 // const addTax = (rate, value) => rate + rate * value;
@@ -146,3 +146,20 @@ const addVue = newFramework.call(framework, 'vue');
 
 console.log(framework);
 console.log(framework.showAll());
+
+
+
+const btn = document.querySelector('button');
+
+
+let num = 2;
+
+framework.addNewFramework = function () {
+  // console.log(`${this}  from framework`);
+  console.log(framework, this);
+  console.log(`${num++}`);
+  console.log(this.frontend.push('new test'));
+  console.log(this.frontend);
+}
+
+btn.addEventListener('click', framework.addNewFramework.bind(framework));
