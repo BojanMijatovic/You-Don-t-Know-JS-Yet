@@ -162,4 +162,30 @@ framework.addNewFramework = function () {
   console.log(this.frontend);
 }
 
-btn.addEventListener('click', framework.addNewFramework.bind(framework));
+// btn.addEventListener('click', framework.addNewFramework.bind(framework));
+
+const person = {
+  name: 'Alex'
+}
+
+
+
+// person.addLastName = () => {
+//   this.lastName = 'Test';
+//   console.log(person);
+//   console.log(this);
+// };
+
+// console.log(this);
+
+// person.addLastName = function () {
+//   this.lastName = 'From here';
+//   this.year = 30;
+//   console.log(person);
+//   console.log(this);
+// }
+
+// btn.addEventListener('click', person.addLastName);
+
+
+// console.log(person);
