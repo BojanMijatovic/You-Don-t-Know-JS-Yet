@@ -221,6 +221,8 @@ let num = 2;
 
 // b();
 // a();
+
+
 //  closure
 (function () {
   const h = document.querySelector('h1');
