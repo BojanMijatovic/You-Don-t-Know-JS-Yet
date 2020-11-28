@@ -154,19 +154,19 @@ const btn = document.querySelector('button');
 
 let num = 2;
 
-framework.addNewFramework = function () {
-  // console.log(`${this}  from framework`);
-  console.log(framework, this);
-  console.log(`${num++}`);
-  console.log(this.frontend.push('new test'));
-  console.log(this.frontend);
-}
+// framework.addNewFramework = function () {
+//   // console.log(`${this}  from framework`);
+//   console.log(framework, this);
+//   console.log(`${num++}`);
+//   console.log(this.frontend.push('new test'));
+//   console.log(this.frontend);
+// }
 
 // btn.addEventListener('click', framework.addNewFramework.bind(framework));
 
-const person = {
-  name: 'Alex'
-}
+// const person = {
+//   name: 'Alex'
+// }
 
 
 
@@ -189,3 +189,43 @@ const person = {
 
 
 // console.log(person);
+
+
+
+// const secure = function () {
+//   let number = 0;
+//   return function () {
+//     number++;
+//     console.log(`number is ${number}`);
+//   }
+// }
+
+// const a = secure();
+// a();
+// a();
+// a();
+// a();
+
+// console.dir(a)
+
+
+// let a;
+
+// const b = function () {
+//   let c = 4;
+//   a = function () {
+//     console.log(c * 2);
+//   }
+//   console.log(a);
+// }
+
+// b();
+// a();
+//  closure
+(function () {
+  const h = document.querySelector('h1');
+  h.style.color = 'red';
+  document.querySelector('body').addEventListener('click', function () {
+    h.style.color = 'blue';
+  })
+})();
