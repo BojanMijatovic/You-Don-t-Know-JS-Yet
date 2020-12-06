@@ -1,0 +1,29 @@
+ body {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 100px;
+ }
+
+ .subtitle {
+   margin: 0 auto;
+   background-color: red;
+   font-size: 18px;
+   text-align: center;
+   color: whitesmoke;
+   padding: 8px;
+   margin-bottom: 10px;
+ }
+
+ .displayNone {
+   display: none;
+ }
+
+ .display {
+   display: block;
+ }
+
+ .create {
+   display: flex;
+   margin: 5px;
+ }
