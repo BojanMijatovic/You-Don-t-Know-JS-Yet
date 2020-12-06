@@ -1,4 +1,3 @@
-
 const title = document.querySelector('.title h1');
 const subTitle = document.querySelector('.title h3');
 
@@ -19,7 +18,6 @@ const newNote = document.getElementById('new-note');
 const createNoteBtn = document.querySelector('.createNote');
 const removeAllNotesBtn = document.querySelector('.removeNotes');
 
-
 removeAllNotesBtn.classList.add('displayNone');
 searchForm.classList.add('displayNone');
 
@@ -39,7 +37,6 @@ createNoteBtn.addEventListener('click', function () {
     searchForm.classList.remove('displayNone');
   }
   newNote.value = '';
-  console.log(notesArr);
 });
 
 //  clear notes
@@ -51,15 +48,13 @@ removeAllNotesBtn.addEventListener('click', function () {
   searchForm.classList.add('displayNone');
 })
 
-
-
 //  search note
 searchBtn.addEventListener('click', function (e) {
   e.preventDefault();
   const text = searchNotes.value;
   const filterNotes = notesArr.filter(note => note.includes(text));     // find filtered notes 
   notes.innerHTML = '';
-  filterNotes.map(note => {                                                     // create new arr with filtered notes and replace with old
+  filterNotes.map(note => {                                                                 // create new arr with filtered notes and replace with old
     const newDiv = document.createElement('div');
     newDiv.append(note);
     notes.append(newDiv);
