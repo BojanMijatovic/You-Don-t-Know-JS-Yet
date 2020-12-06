@@ -18,7 +18,7 @@ const activityList = document.querySelector('.activity');
 
 appTitle.textContent = `Here is new app for bank account`;
 app.textContent = `Welcome ${user.name}`;
-status.textContent = `Your total is ${user.money}$`;
+
 
 //  show account activity
 const showList = function (account) {
@@ -30,9 +30,24 @@ const showList = function (account) {
     app.append(activityList);
   })
 }
-
 showList(user);
 
-//  calc total money
-const totalMoney = user.activityStatus.reduce((prev, acc) => prev + acc, 0);
-status.textContent = `Your total is ${totalMoney}$`;
+
+//  add deposit
+inputMoneyBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  const deposit = Number(inputMoney.value);
+  console.log(deposit);
+  user.activityStatus.push(deposit);
+  totalMoney(user);
+  showList(user);
+})
+
+//  show total money
+const totalMoney = function (account) {
+  showList(user);
+  const total = account.activityStatus.reduce((prev, acc) => prev + acc, account.money);
+  status.textContent = `Now you have ${total}$`;
+}
+
+totalMoney(user);
