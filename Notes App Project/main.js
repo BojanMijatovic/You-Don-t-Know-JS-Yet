@@ -45,6 +45,7 @@ createNoteBtn.addEventListener('click', function () {
 //  clear notes
 removeAllNotesBtn.addEventListener('click', function () {
   notes.textContent = '';
+  searchNotes.value = '';
   notesArr = [];
   removeAllNotesBtn.classList.add('displayNone');
   searchForm.classList.add('displayNone');
@@ -56,7 +57,12 @@ removeAllNotesBtn.addEventListener('click', function () {
 searchBtn.addEventListener('click', function (e) {
   e.preventDefault();
   const text = searchNotes.value;
-  const filterNotes = notesArr.filter(note => note.includes(text));
-  notes.textContent = filterNotes;
-  console.log(`Search note`, text);
+  const filterNotes = notesArr.filter(note => note.includes(text));     // find filtered notes 
+  notes.innerHTML = '';
+  filterNotes.map(note => {                                                     // create new arr with filtered notes and replace with old
+    const newDiv = document.createElement('div');
+    newDiv.append(note);
+    notes.append(newDiv);
+  })
+  searchNotes.value = '';
 })
