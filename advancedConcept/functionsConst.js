@@ -1,23 +1,18 @@
 
-const newDate = new Date();
-// console.log(newDate);
 
-const time = newDate.toLocaleTimeString();
-console.log(time);
+const showDay = function () {
+  const date = new Date();
+  const day = date.getDate();      // const a = date.toLocaleDateString(); or same with Locale Date String
+  const showDay = document.createElement('p');
+  // month 
+  const month = date.getMonth();
+  // year
+  const year = date.getFullYear();
+  // time
+  const time = date.toLocaleTimeString();
 
-const day = newDate.toLocaleDateString();
-console.log(day);
+  showDay.textContent = `Today is ${day}/${month}/${year} and time is ${time} `;
+  document.body.append(showDay);
+}
 
-const singleDay = newDate.getDate();
-console.log(singleDay);
-
-const month = newDate.getMonth() + 1;
-console.log(month);
-
-const m = newDate.toDateString();
-console.log(m);
-
-const w = m.split(' ');
-console.log(w);
-
-console.log(`Today is ${w[0]} ${singleDay}/${month} and time is ${time}`);
+showDay();
