@@ -8,7 +8,7 @@ const user = {
 
 const appTitle = document.querySelector('.title');
 const app = document.querySelector('.app');
-const message = document.querySelector('.app h2');
+const message = document.querySelector('.app h3');
 const inputMoney = document.getElementById('income-money');
 const inputMoneyBtn = document.querySelector('.incomeBtn');
 const withdrawMoney = document.getElementById('withdraw-money');
@@ -17,8 +17,8 @@ const status = document.querySelector('.status');
 const activityList = document.querySelector('.activity');
 
 appTitle.textContent = `Here is new app for bank account`;
-app.textContent = `Welcome ${user.name}`;
-
+message.textContent = `Welcome ${user.name}`;
+message.classList.add('color');
 
 //  show account activity
 const showList = function (account) {
@@ -41,6 +41,7 @@ inputMoneyBtn.addEventListener('click', function (e) {
   user.activityStatus.push(deposit);
   totalMoney(user);
   showList(user);
+  inputMoney.value = '';
 })
 
 //  show total money
