@@ -14,16 +14,42 @@ body {
   font-family: 'Merriweather', serif;
 }
 
-.none {
-  display: none;
-}
-
-.login {
+.showLogin {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   justify-content: center;
+}
+
+/*  show login form */
+.displayBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.displayBtn h2 {
+  font-size: 2.5rem;
+  margin: 2rem;
+  color: #1e166e;
+}
+
+.show {
+  border: none;
+  background-color: #1e166e;
+  color: #f0f8ff;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+
+}
+
+/*  login */
+.login {
+  display: none;
 }
 
 .title {
@@ -65,12 +91,10 @@ body {
   outline: none;
 }
 
-
 .messages {
   margin-top: 3rem;
   background-color: royalblue;
 }
-
 
 .success {
   background-color: seagreen;
