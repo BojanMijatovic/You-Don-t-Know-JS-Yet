@@ -13,9 +13,17 @@ btn.addEventListener('click', () => {
   document.body.append(item);
 })
 
-
+//  toggle nav
 remove.addEventListener('click', () => {
   allLinks.forEach(i => {
     i.classList.toggle('display') ? remove.textContent = 'add nav' : remove.textContent = 'remove nav';
   })
 })
+
+
+//  remove single item
+// allLinks.forEach(item => {
+//   item.addEventListener('click', () => {
+//     item.remove();
+//   })
+// })
