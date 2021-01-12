@@ -1,55 +1,47 @@
-const allLinks = document.querySelectorAll('.__items');
-const btn = document.querySelector('.add-item');
-const remove = document.querySelector('.remove');
-const title = document.querySelector('h1');
-console.log(allLinks);
+const form = document.querySelector('#form');
+const usersList = document.querySelector('.users');
+let users = [];
 
 
-btn.addEventListener('click', () => {
-    const item = document.createElement('div');
-    item.classList.add('new');
-    item.textContent = 'Here is new item';
-    document.body.append(item);
-})
 
-//  toggle nav
-remove.addEventListener('click', () => {
-    allLinks.forEach(i => {
-        i.classList.toggle('display') ? remove.textContent = 'add nav' : remove.textContent = 'remove nav';
+
+const showUser = () => {
+    usersList.innerHTML = '';
+    users.map((user, id) => {
+
+        //  create single user
+
+        const showUser = document.createElement('div');
+        const userName = document.createElement('p');
+        userName.textContent = user.name;
+        const userId = document.createElement('p');
+        userId.textContent = id;
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'X';
+
+        showUser.classList.add('showUser');
+        showUser.append(userName, userId, removeBtn);
+
+        //  remove single item
+        console.log(user);
+
+        usersList.append(showUser);
+
+
     })
-})
+}
 
 
-//  remove single item
-// allLinks.forEach(item => {
-//   item.addEventListener('click', () => {
-//     item.remove();
-//   })
-// })
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    users.push({ name: e.target.elements.addName.value, id: '' })
+    e.target.elements.addName.value = '';
+    showUser();
 
-
-
-//  one more way to remove single item from arr
-const tools = document.querySelectorAll('.tool');
-tools.forEach(tool => {
-    const a = document.createElement('p');
-    a.textContent = 'text';
-    a.classList.add('hero');
-    tool.append(a);
-    a.addEventListener('click', function() {
-        tool.remove();
-    })
 })
 
 
 
-//  scroll to sections
-const scrollBtn = document.querySelector('.scroll');
 
-// scrollBtn.scrollIntoView({ behavior: 'smooth' });
-// scrollBtn.addEventListener('click', window.scrollIntoView({ behavior: 'smooth' }));
 
-scrollBtn.addEventListener('click', () => {
-    const section = document.getElementById('one');
-    section.scrollIntoView({ behavior: 'smooth' });
-})
+//  e.target.elements.fromForm.value

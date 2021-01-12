@@ -72,3 +72,19 @@ button {
     background-color: seagreen;
     color: white;
 }
+
+.item {
+    font-size: 1.4rem;
+    color: green;
+}
+
+.showUser {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    color: green;
+}
+
+.showUser p {
+    margin: 1rem;
+}
