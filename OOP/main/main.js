@@ -42,77 +42,152 @@
 // ted.addJob('mechanic');
 
 
-const Car = function(make, speed) {
-    this.make = make;
-    this.speed = speed;
+// const Car = function(make, speed) {
+//     this.make = make;
+//     this.speed = speed;
+// }
+
+// Car.prototype.accelerate = function() {
+//     this.speed += 10;
+//     console.log(`Speed now is ${this.speed}`);
+// }
+
+// Car.prototype.break = function() {
+//     this.speed -= 5;
+//     console.log(`Speed now is ${this.speed}`);
+// }
+
+
+// const max = new Car('audi', 100);
+// // console.log(max);
+
+// // max.accelerate();
+// // max.break();
+
+
+// //  class declaration ES6
+// class Person {
+//     constructor(firstName, birthYear) {
+//         this.firstName = firstName;
+//         this.birthYear = birthYear
+//     }
+
+//     calcAge(year) {
+//         return year - this.birthYear
+//     };
+
+//     get age() {
+//         return 2021 - this.birthYear;
+//     }
+// }
+
+// const fillip = new Person('fillip', 2010);
+// console.log(fillip);
+// console.log(fillip.calcAge(2021));
+// console.log(fillip.age);
+
+// const acc = {
+//     owner: 'Alex',
+//     movements: [1312, 13, 111, 33],
+
+//     // getter
+//     get latest() {
+//         return this.movements.splice(this.movements.length - 1)
+//     },
+
+//     set latest(movement) {
+//         this.movements.push((movement))
+//     }
+// }
+
+// console.log(acc.latest);
+
+// const PersonProto = {
+//     calcAge() {
+//         return 2021 - this.birthYear
+//     }
+// }
+
+// const steven = Object.create(PersonProto);
+// steven.firstName = 'steven';
+// steven.birthYear = 1987;
+// console.log(steven.calcAge());
+
+// console.log(steven.__proto__);
+
+
+// class NewCar {
+//     constructor(model, speed) {
+//         this.model = model;
+//         this.speed = speed;
+//     }
+
+//     get usSpeed() {
+//         return this.speed / 1.6;
+//     }
+
+//     set usSpeed(speed) {
+//         if (!this.speed) {
+//             return this.speed = speed * 1.6;
+//         }
+//     }
+// }
+
+// const ford = new NewCar('ford', 120);
+// console.log(ford);
+// console.log(ford.usSpeed);
+
+// const alfa = new NewCar('alfa');
+// console.log(alfa);
+// console.log(alfa.usSpeed = 75);
+// console.log(alfa);
+
+// class CarProto {
+//     get gearUp() {
+//         return this.speed + 10;
+//     };
+
+//     set break(speed) {
+//         return this.speed - speed;
+//     }
+// }
+
+// const bmw = Object.create(CarProto);
+
+// bmw.speed = 100;
+// bmw.gearUp;
+
+// bmw.break;
+// console.log(bmw);
+
+
+// Inheritance Between "Classes": Constructor Functions
+const Person = function(firstName, birth) {
+    this.firstName = firstName;
+    this.birth = birth;
 }
 
-Car.prototype.accelerate = function() {
-    this.speed += 10;
-    console.log(`Speed now is ${this.speed}`);
-}
-
-Car.prototype.break = function() {
-    this.speed -= 5;
-    console.log(`Speed now is ${this.speed}`);
+Person.prototype.calcAge = function() {
+    return 2021 - this.birth;
 }
 
 
-const max = new Car('audi', 100);
-// console.log(max);
-
-// max.accelerate();
-// max.break();
-
-
-//  class declaration ES6
-class Person {
-    constructor(firstName, birthYear) {
-        this.firstName = firstName;
-        this.birthYear = birthYear
-    }
-
-    calcAge(year) {
-        return year - this.birthYear
-    };
-
-    get age() {
-        return 2021 - this.birthYear;
-    }
+const Student = function(firstName, birth, course) {
+    Person.call(this, firstName, birth)
+    this.course = course;
 }
 
-const fillip = new Person('fillip', 2010);
-console.log(fillip);
-console.log(fillip.calcAge(2021));
-console.log(fillip.age);
+Student.prototype = Object.create(Person.prototype);
 
-const acc = {
-    owner: 'Alex',
-    movements: [1312, 13, 111, 33],
 
-    // getter
-    get latest() {
-        return this.movements.splice(this.movements.length - 1)
-    },
-
-    set latest(movement) {
-        this.movements.push((movement))
-    }
+Student.prototype.showInfo = function() {
+    console.log(`Hello I am ${this.firstName} born ${this.birth} going to course ${this.course}`);
 }
 
-console.log(acc.latest);
+const mike = new Student('Mike', 1987, 'React');
 
+console.log(mike);
+mike.showInfo();
+console.log(mike.calcAge());
 
-
-const PersonProto = {
-    calcAge() {
-        return 2021 - this.birthYear
-    }
-}
-
-const steven = Object.create(PersonProto);
-steven.firstName = 'steven';
-steven.birthYear = 1987;
-console.log(steven.calcAge());
-
-console.log(steven.__proto__);
+// console.log(mike.hasOwnProperty('course'));
