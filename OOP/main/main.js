@@ -162,32 +162,71 @@
 
 
 // Inheritance Between "Classes": Constructor Functions
-const Person = function(firstName, birth) {
-    this.firstName = firstName;
-    this.birth = birth;
-}
+// const Person = function(firstName, birth) {
+//     this.firstName = firstName;
+//     this.birth = birth;
+// }
 
-Person.prototype.calcAge = function() {
-    return 2021 - this.birth;
-}
-
-
-const Student = function(firstName, birth, course) {
-    Person.call(this, firstName, birth)
-    this.course = course;
-}
-
-Student.prototype = Object.create(Person.prototype);
+// Person.prototype.calcAge = function() {
+//     return 2021 - this.birth;
+// }
 
 
-Student.prototype.showInfo = function() {
-    console.log(`Hello I am ${this.firstName} born ${this.birth} going to course ${this.course}`);
-}
+// const Student = function(firstName, birth, course) {
+//     Person.call(this, firstName, birth)
+//     this.course = course;
+// }
 
-const mike = new Student('Mike', 1987, 'React');
+// Student.prototype = Object.create(Person.prototype);
 
-console.log(mike);
-mike.showInfo();
-console.log(mike.calcAge());
+
+// Student.prototype.showInfo = function() {
+//     console.log(`Hello I am ${this.firstName} born ${this.birth} going to course ${this.course}`);
+// }
+
+// const mike = new Student('Mike', 1987, 'React');
+
+// console.log(mike);
+// mike.showInfo();
+// console.log(mike.calcAge());
 
 // console.log(mike.hasOwnProperty('course'));
+
+class Person {
+    constructor(name, lastName, age) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    showPerson() {
+        console.log(`Hello my name is ${this.name} ${this.lastName} and have age ${this.age}`);
+    }
+}
+
+
+const alex = new Person('Alex', 'Smith', 25);
+alex.showPerson();
+
+
+
+class Student extends Person {
+    constructor(name, lastName, age, fax) {
+        super(name, lastName, age);
+        this.fax = fax;
+    }
+
+    showFax() {
+        console.log(`My fax is ${this.fax}`);
+    }
+
+    showPerson() {
+        console.log(`Hey my name is ${this.name} and I am student ${this.fax}`);
+    }
+}
+
+const ted = new Student('Ted', 'James', 21, 'Ftn');
+
+// ted.showPerson();
+ted.showFax();
+
+ted.showPerson();
