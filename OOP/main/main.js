@@ -230,3 +230,59 @@ const ted = new Student('Ted', 'James', 21, 'Ftn');
 ted.showFax();
 
 ted.showPerson();
+
+
+class Account {
+    constructor(name, lastName) {
+        this.name = name;
+        this.lastName = lastName;
+    }
+}
+
+
+class BankAccount extends Account {
+    constructor(name, lastName, totalSum, pin) {
+        super(name, lastName);
+        this.totalSum = totalSum;
+        this.pin = pin;
+        this.movements = [];
+        this.locale = navigator.language;
+    }
+
+    showInfo() {
+        console.log(`Greet to new user ${this.name} ${this.lastName} 
+         you have on account ${this.totalSum} and pin is ${this.pin}`);
+    }
+
+    // add deposit
+    deposit(money) {
+        this.movements.push(money);
+
+    }
+
+    //withdraw
+    withdraw(val) {
+        this.deposit(-val);
+    }
+
+    //  show Total
+    showTotal() {
+        const total = this.movements.reduce((acc, nextVal) => acc + nextVal);
+        return console.log(total);
+    }
+}
+
+
+const newUser = new BankAccount('Andrew', 'Mead', 100, 2121);
+// newUser.showInfo();
+newUser.deposit(400);
+newUser.deposit(200);
+newUser.withdraw(50);
+newUser.deposit(300);
+// newUser.deposit(600);
+
+
+
+newUser.showTotal();
+
+console.log(newUser);
