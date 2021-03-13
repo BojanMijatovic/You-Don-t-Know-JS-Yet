@@ -35,3 +35,7 @@ const facebookPages = [{
 // 1. Get the number of fans per page
 // 2. Get the aggregation of post likes per page
 // 3. Get the number of post comments per page
+
+console.log('11' - 2); // number
+console.log(2 + '11'); // string
+console.log(typeof('11' + 1)); // string
