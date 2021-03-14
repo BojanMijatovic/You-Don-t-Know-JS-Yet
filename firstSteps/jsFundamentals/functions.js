@@ -35,3 +35,23 @@ const total = addSum(4, 19);
 console.log(total);
 
 //  Arrow functions
+
+
+//                    single  parameter
+const calcAge = birthYear => 2021 - birthYear;
+const age = calcAge(1987);
+// console.log(age);
+
+//                without parameters        
+const test = () => 4 + 4;
+const total1 = test();
+// console.log(total1);
+
+
+//  2 or more parameters
+const getTotal = (add, total) => {
+    return total += add;
+}
+
+const bankTotal = getTotal(100, 250);
+console.log(bankTotal);
