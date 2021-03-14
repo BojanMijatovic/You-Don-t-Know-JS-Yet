@@ -1,3 +1,5 @@
+'use strict';
+
 const facebookPages = [{
     title: "1. FC Pauli",
     fans: 2011,

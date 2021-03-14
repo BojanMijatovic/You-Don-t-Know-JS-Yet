@@ -1,34 +1,10 @@
+//   start again with functions 
+// function declaration
 
-function logger() {
-  console.log(`Hello my name is ....`);
-}
+function showFruit(fruit, number) {
+    return number > 1 ? `You have ${number} ${fruit}s` : `You have ${number} ${fruit}`;
+};
 
-//  calling  / running /  invoking function
-// logger();
-
-
-function createJuice(fruit) {
-  return `This juice is from ${fruit}`;
-}
-
-const apple = createJuice('apple');
-console.log(apple);
-
-const orange = createJuice('orange');
-console.log(orange);
-
-//  function declaration
-function calcAge(birthYear) {
-  return 2020 - birthYear;
-}
-
-const age1 = calcAge(1987);
-console.log(age1);
-
-//  function expression
-const calcAge2 = function (birthYear) {
-  return 2020 - birthYear;
-}
-
-const age2 = calcAge2(1985);
-console.log(age2);
+//                                  here is arguments
+console.log(showFruit('apple', 5));
+console.log(showFruit('banana', 1));
