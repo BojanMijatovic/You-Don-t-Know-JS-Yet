@@ -47,4 +47,9 @@ for (let i = 0; i < bills.length; i++) {
     tips.push(calcTip(bills[i]));
 }
 
-console.log(tips);
+// console.log(tips);
+
+
+for (let i = bills.length - 1; 0 <= i; i--) {
+    console.log(bills[i]);
+}
