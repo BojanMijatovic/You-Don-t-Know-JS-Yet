@@ -53,3 +53,36 @@ for (let i = 0; i < bills.length; i++) {
 for (let i = bills.length - 1; 0 <= i; i--) {
     console.log(bills[i]);
 }
+
+const facebookPages = [{
+    title: "1. FC Pauli",
+    fans: 2011,
+    posts: [{
+            title: "Loss in first game",
+            content: "long text",
+            likes: 12,
+            comments: [{
+                    text: "what a bad game!",
+                },
+                {
+                    text: "trainers fault!",
+                },
+            ],
+        },
+        {
+            title: "90 minutes thriller",
+            content: "long text 1231",
+            likes: 132,
+            comments: [{
+                    text: "amazing game",
+                },
+                {
+                    text: "great to see you winning",
+                },
+                {
+                    text: "90 minutes standing",
+                },
+            ],
+        },
+    ],
+}, ];
