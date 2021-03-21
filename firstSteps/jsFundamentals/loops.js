@@ -50,9 +50,9 @@ for (let i = 0; i < bills.length; i++) {
 // console.log(tips);
 
 
-for (let i = bills.length - 1; 0 <= i; i--) {
-    console.log(bills[i]);
-}
+// for (let i = bills.length - 1; 0 <= i; i--) {
+//     console.log(bills[i]);
+// }
 
 const facebookPages = [{
     title: "1. FC Pauli",
@@ -86,3 +86,37 @@ const facebookPages = [{
         },
     ],
 }, ];
+
+
+const addFan = function(newFan) {
+    // const newFans = fans += newFan;
+    // return newFans;
+    facebookPages[0].fans += newFan;
+}
+
+
+
+// addFan(4, facebookPages[0].fans);
+
+addFan(5);
+addFan(155);
+
+
+
+const addLike = (like) => {
+    facebookPages[0].posts[0].likes += like;
+}
+
+addLike(20);
+
+// console.log(facebookPages[0]);
+
+console.log(facebookPages);
+
+const addNewLike = function(like) {
+    return facebookPages[0].posts[1].likes += like;
+}
+
+const showLike = () => `Now we have ${addNewLike(40)} new likes`;
+
+console.log(showLike());
