@@ -235,7 +235,6 @@ const printForecast = (arr) => {
     }
 }
 
-
 printForecast(temperatures);
 
 
@@ -246,3 +245,26 @@ const sumNumber = (arr) => {
 }
 
 sumNumber(numbers);
+
+const addNewPost = (title, content, like, arr) => {
+    const post = { title: title, content: content, like: like++ }
+    return arr.push(post);
+};
+
+addNewPost('new post', 'test', 1, facebookPages[0].posts);
+addNewPost('second post', ' new test', 2, facebookPages[0].posts);
+
+console.log(facebookPages[0].posts);
+
+const addComment = (comment, arr) => {
+    const objComment = {
+        text: comment
+    };
+    arr.push(objComment);
+};
+
+
+addComment('here is new comment', facebookPages[0].posts[1].comments);
+addComment('second comment', facebookPages[0].posts[1].comments);
+
+console.log(facebookPages[0].posts[1].comments);
