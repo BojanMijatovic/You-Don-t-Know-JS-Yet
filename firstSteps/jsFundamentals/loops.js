@@ -152,3 +152,40 @@ console.log(m1);
 const showPost = (post) => `Post with title ${post.title} have ${post.likes} likes`;
 
 console.log(showPost(facebookPages[0].posts[0]));
+
+
+const expenses = [];
+
+const addExpense = (title, amount, expenses) => {
+    let expense = { title: title, amount: amount }
+    return expenses.push(expense);
+}
+
+addExpense('bread', 4, expenses);
+addExpense('beer', 8, expenses);
+
+console.log(expenses);
+
+
+for (let i = 0; i < expenses.length; i++) {
+    console.log(`You have ${expenses[i].title} for ${expenses[i].amount}$`);
+}
+
+
+let hotelRooms = 100;
+
+const freeRoms = (checkRoom) => {
+    // let free = hotelRooms -= checkRoom;
+    // return `Now you have ${free} rooms`;
+    return `Now you have ${hotelRooms -= checkRoom} rooms`
+}
+
+const checkRoom = freeRoms(4);
+const checkRoom1 = freeRoms(24);
+const checkRoom2 = freeRoms(50);
+console.log(checkRoom);
+console.log(checkRoom1);
+
+console.log(checkRoom2);
+
+console.log(freeRoms(10));
