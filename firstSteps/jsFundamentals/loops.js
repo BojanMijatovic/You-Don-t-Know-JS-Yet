@@ -5,12 +5,10 @@
 // }
 
 const newArr = ['name', 'lastName', 2021 - 1987, [1, 2, 3, 4, 5]];
-
-
 const types = [];
 
 for (let i = 0; i < newArr.length; i++) {
-    console.log(`${newArr[i]}`);
+    // console.log(`${newArr[i]}`);
     types.push(`${typeof newArr[i]}`)
 }
 
@@ -111,7 +109,7 @@ addLike(20);
 
 // console.log(facebookPages[0]);
 
-console.log(facebookPages);
+// console.log(facebookPages);  
 
 const addNewLike = function(like) {
     return facebookPages[0].posts[1].likes += like;
@@ -146,7 +144,7 @@ addNum(448);
 const convertToKM = (mile) => mile * 1.609;
 
 const m1 = convertToKM(1);
-console.log(m1);
+// console.log(m1);
 
 const showPost = (post) => `Post with title ${post.title} have ${post.likes} likes`;
 
@@ -167,7 +165,7 @@ addExpense('beer', 8, expenses);
 
 
 for (let i = 0; i < expenses.length; i++) {
-    console.log(`You have ${expenses[i].title} for ${expenses[i].amount}$`);
+    // console.log(`You have ${expenses[i].title} for ${expenses[i].amount}$`);
 }
 
 
@@ -182,11 +180,10 @@ const freeRoms = (checkRoom) => {
 const checkRoom = freeRoms(4);
 const checkRoom1 = freeRoms(24);
 const checkRoom2 = freeRoms(50);
-console.log(checkRoom);
-console.log(checkRoom1);
-console.log(checkRoom2);
-
-console.log(freeRoms(10));
+// console.log(checkRoom);
+// console.log(checkRoom1);
+// console.log(checkRoom2);
+// console.log(freeRoms(10));
 
 const user = {
     name: 'Alex',
@@ -206,7 +203,7 @@ const user = {
 user.addExpense(40);
 user.addExpense(100);
 user.income(200);
-console.log(user.showAmount());
+// console.log(user.showAmount());
 
 
 
@@ -231,7 +228,7 @@ const temperatures = [17, 21, 23];
 const printForecast = (arr) => {
     let day = 1;
     for (let i = 0; i < arr.length; i++) {
-        console.log(`${arr[i]} in ${day++} days`);
+        // console.log(`${arr[i]} in ${day++} days`);
     }
 }
 
@@ -240,7 +237,7 @@ printForecast(temperatures);
 
 const sumNumber = (arr) => {
     for (let i = 0; i < arr.length; i++) {
-        console.log(`${arr[i] * 2} is best number`);
+        // console.log(`${arr[i] * 2} is best number`);
     }
 }
 
@@ -254,7 +251,7 @@ const addNewPost = (title, content, like, arr) => {
 addNewPost('new post', 'test', 1, facebookPages[0].posts);
 addNewPost('second post', ' new test', 2, facebookPages[0].posts);
 
-console.log(facebookPages[0].posts);
+// console.log(facebookPages[0].posts);
 
 const addComment = (comment, arr) => {
     const objComment = {
@@ -267,4 +264,4 @@ const addComment = (comment, arr) => {
 addComment('here is new comment', facebookPages[0].posts[1].comments);
 addComment('second comment', facebookPages[0].posts[1].comments);
 
-console.log(facebookPages[0].posts[1].comments);
+// console.log(facebookPages[0].posts[1].comments);
