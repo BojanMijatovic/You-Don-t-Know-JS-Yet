@@ -14,7 +14,7 @@ for (let i = 0; i < newArr.length; i++) {
     types.push(`${typeof newArr[i]}`)
 }
 
-console.log(types);
+// console.log(types);
 
 /*
 Let's improve Steven's tip calculator even more, this time using loops!
@@ -119,4 +119,36 @@ const addNewLike = function(like) {
 
 const showLike = () => `Now we have ${addNewLike(40)} new likes`;
 
-console.log(showLike());
+// console.log(showLike());
+
+
+const numbers = [43, 343, 213, 98, 2, 78];
+
+for (let i = 0; i < numbers.length; i++) {
+    let num = numbers[i] * 2;
+    console.log(`New numbers are ${num}`);
+
+}
+// reverse 
+for (let i = numbers.length - 1; i >= 0; i--) {
+    console.log(`Number ${numbers[i]}`);
+}
+
+const addNum = function(num) {
+    numbers.push(num);
+}
+
+addNum(4);
+addNum(448);
+
+console.log(numbers);
+
+
+const convertToKM = (mile) => mile * 1.609;
+
+const m1 = convertToKM(1);
+console.log(m1);
+
+const showPost = (post) => `Post with title ${post.title} have ${post.likes} likes`;
+
+console.log(showPost(facebookPages[0].posts[0]));
