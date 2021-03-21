@@ -126,12 +126,11 @@ const numbers = [43, 343, 213, 98, 2, 78];
 
 for (let i = 0; i < numbers.length; i++) {
     let num = numbers[i] * 2;
-    console.log(`New numbers are ${num}`);
-
+    // console.log(`New numbers are ${num}`);
 }
 // reverse 
 for (let i = numbers.length - 1; i >= 0; i--) {
-    console.log(`Number ${numbers[i]}`);
+    // console.log(`Number ${numbers[i]}`);
 }
 
 const addNum = function(num) {
@@ -141,7 +140,7 @@ const addNum = function(num) {
 addNum(4);
 addNum(448);
 
-console.log(numbers);
+// console.log(numbers);
 
 
 const convertToKM = (mile) => mile * 1.609;
@@ -151,7 +150,7 @@ console.log(m1);
 
 const showPost = (post) => `Post with title ${post.title} have ${post.likes} likes`;
 
-console.log(showPost(facebookPages[0].posts[0]));
+// console.log(showPost(facebookPages[0].posts[0]));
 
 
 const expenses = [];
@@ -164,7 +163,7 @@ const addExpense = (title, amount, expenses) => {
 addExpense('bread', 4, expenses);
 addExpense('beer', 8, expenses);
 
-console.log(expenses);
+// console.log(expenses);
 
 
 for (let i = 0; i < expenses.length; i++) {
@@ -185,7 +184,65 @@ const checkRoom1 = freeRoms(24);
 const checkRoom2 = freeRoms(50);
 console.log(checkRoom);
 console.log(checkRoom1);
-
 console.log(checkRoom2);
 
 console.log(freeRoms(10));
+
+const user = {
+    name: 'Alex',
+    lastName: 'Freddy',
+    amount: 1000,
+    addExpense: function(expense) {
+        return this.amount -= expense;
+    },
+    income: function(income) {
+        return this.amount += income;
+    },
+    showAmount: function() {
+        return `${this.name}: ${this.amount}$`
+    }
+}
+
+user.addExpense(40);
+user.addExpense(100);
+user.income(200);
+console.log(user.showAmount());
+
+
+
+///////////////////////////////////////
+// Coding Challenge #1
+
+/*
+Given an array of forecasted maximum temperatures, the thermometer displays a string with these temperatures.
+
+Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
+
+Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+
+TEST DATA 1: [17, 21, 23]
+TEST DATA 2: [12, 5, -5, 0, 4]
+*/
+
+const temperatures = [17, 21, 23];
+
+const printForecast = (arr) => {
+    let day = 1;
+    for (let i = 0; i < arr.length; i++) {
+        console.log(`${arr[i]} in ${day++} days`);
+    }
+}
+
+
+printForecast(temperatures);
+
+
+const sumNumber = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(`${arr[i] * 2} is best number`);
+    }
+}
+
+sumNumber(numbers);
