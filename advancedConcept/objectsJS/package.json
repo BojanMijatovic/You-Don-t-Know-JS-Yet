@@ -4,7 +4,7 @@
   "description": "Functional lib and examples in ES8",
   "main": "functionalPrograming.js",
   "dependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.10.4"
